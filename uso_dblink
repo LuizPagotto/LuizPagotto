@@ -1,0 +1,10 @@
+SELECT A.SID,
+       A.SERIAL#, 
+       A.STATUS, 
+       A.SCHEMANAME, 
+       A.OSUSER, 
+       A.SQL_EXEC_START
+FROM   V$SESSION A,
+       V$SQLAREA B
+WHERE  A.SQL_ID = B.SQL_ID
+AND    B.SQL_FULLTEXT LIKE ('%@<nome_db_link>%');
