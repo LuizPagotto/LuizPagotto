@@ -1,0 +1,9 @@
+select sql_text, 
+       object_status, 
+       first_load_time, 
+       username, 
+       sid, 
+       lockwait 
+from   v$session ses, v$sql sql 
+where  ses.sql_id = sql.sql_id 
+and    sid = &sid
