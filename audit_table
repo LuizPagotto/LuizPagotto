@@ -1,0 +1,4 @@
+select *
+from dba_audit_trail 
+where obj_name = '<nome_da_tabela>'
+and   trunc(timestamp) = trunc(sysdate) -1;
