@@ -1,0 +1,17 @@
+SELECT NVL(s.username, '(oracle)') AS username,
+       s.osuser,
+       s.sid,
+       s.serial#,
+       p.spid,
+       s.lockwait,
+       s.status,
+       s.module,
+       s.machine,
+       s.program,
+       to_char(s.logon_Time,'DD-MON-YYYY HH24:MI:SS') AS logon_time
+from   v$session s,
+       v$process p
+where  s.paddr  = p.addr
+and    s.status = 'ACTIVE'
+and    s.username = '<owner>'
+order by s.username, s.osuser;
