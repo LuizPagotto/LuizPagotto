@@ -1,0 +1,7 @@
+select round(to_number(to_date('data_hora_final','DD/MM/RRRR HH24:MI') - 
+                       to_date('data_hora_inicial','DD/MM/RRRR HH24:MI')))||' Dia(s) '||
+       round(((to_number(to_date('data_hora_final','DD/MM/RRRR HH24:MI') - 
+                         to_date('data_hora_inicial','DD/MM/RRRR HH24:MI')) * 1440) -1440)/60)||' Hora(s) '||
+       round((to_number(to_date('data_hora_final','DD/MM/RRRR HH24:MI') - 
+                         to_date('data_hora_inicial','DD/MM/RRRR HH24:MI')) * 1440) -1440)||' Minuto(s) '
+from dual
