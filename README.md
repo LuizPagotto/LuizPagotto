@@ -1,0 +1,7 @@
+- 👋 Olá, sou @LuizPagotto
+- 👀 Estou interessado em manter contato com outros desenvolvedores e conhecer novas técnicas.
+- 🌱 Atualmente estou aprendendo Python
+- 💞️ Procuro colaborar com a linguagem SQL, preferecialmente ORACLE
+- 📫 pagottinho@hotmail.com
+- 😄 Pagotto
+- ⚡ Tenho mais de 15 anos de experiência e desenvolvimento em liguagem SQL para ORACLE
