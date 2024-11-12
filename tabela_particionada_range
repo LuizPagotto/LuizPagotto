@@ -1,0 +1,10 @@
+CREATE TABLE <NOME_TABELA>
+(  declaração do campos com tipo e tamanho)
+
+PARTITION BY RANGE (<campo_chave>)
+(PARTITION P_<nome_particao>  VALUES LESS THAN (TO_DATE('01/02/2023','DD/MM/YYYY')),
+ PARTITION P_<nome_particao>  VALUES LESS THAN (TO_DATE('01/03/2023','DD/MM/YYYY')),
+ PARTITION P_<nome_particao>  VALUES LESS THAN (TO_DATE('01/04/2023','DD/MM/YYYY')),
+ PARTITION P_<nome_particao>  VALUES LESS THAN (TO_DATE('01/05/2023','DD/MM/YYYY')),
+ PARTITION P_<nome_particao>  VALUES LESS THAN (TO_DATE('01/06/2023','DD/MM/YYYY')),
+ PARTITION P_<nome_particao>  VALUES LESS THAN (TO_DATE('01/07/2023','DD/MM/YYYY'));
