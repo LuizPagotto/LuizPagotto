@@ -1,0 +1,15 @@
+SELECT J.JOB,
+       J.WHAT,
+       S.SID,
+       S.SERIAL#,
+       P.SPID,
+       S.USERNAME,
+       S.OSUSER
+FROM   DBA_JOBS J
+INNER  JOIN DBA_LOCKS L
+       ON J.JOB = L.LOCK_ID2
+       AND L.LOCK_TYPE = 'JQ'
+INNER  JOIN V$SESSION S
+       ON S.SID = L.SESSION_ID
+INNER  JOIN V$PROCESS P
+       ON P.ADDR = S.PADDR
